@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<link rel='stylesheet'
+	href='bower_components/bootstrap/dist/css/bootstrap.min.css'>
+<script type="text/javascript" src="myscripts/jquery.min.js"></script>
+<!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
+<script type="text/javascript"
+	src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<style type="text/css">
+img {
+	width: 100px;
+	height: 100px;
+}
+</style>
+
+<script type="text/javascript">
+	$(function() {
+		/* 默认显示文件区*/
+		$("#centers").css('display', 'inline');
+		$("#pictures").css('display', 'none');
+		$("#uploads").css('display', 'none');
+		$("#datas").css('display', 'none');
+
+		/* 文件区显示 */
+		$("#file").click(function() {
+			$("#centers").css('display', 'inline');
+			$("#pictures").css('display', 'none');
+			$("#uploads").css('display', 'none');
+			$("#datas").css('display', 'none');
+		});
+		/* 图片区显示 */
+		$("#picture").click(function() {
+			$("#centers").css('display', 'none');
+			$("#pictures").css('display', 'inline');
+			$("#uploads").css('display', 'none');
+			$("#datas").css('display', 'none');
+		});
+		/* 上传区显示 */
+		$("#upload").click(function() {
+			$("#uploads").css('display', 'inline');
+			$("#centers").css('display', 'none');
+			$("#pictures").css('display', 'none');
+			$("#datas").css('display', 'none');
+		});
+
+		/* 个人账户区显示 */
+		$("#data").click(function() {
+			$("#uploads").css('display', 'none');
+			$("#centers").css('display', 'none');
+			$("#pictures").css('display', 'none');
+			$("#datas").css('display', 'inline');
+		});
+		$("#dataes").click(function() {
+			$("#uploads").css('display', 'none');
+			$("#centers").css('display', 'none');
+			$("#pictures").css('display', 'none');
+			$("#datas").css('display', 'inline');
+		});
+
+	});
+</script>
+
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#example-navbar-collapse">
+					<span class="sr-only">切换导航</span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"> </a>
+			</div>
+			<div class="collapse navbar-collapse" id="example-navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a class="icon-bar" href="#">主页</a></li>
+					<li><a href="#" id="data">账户充值</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<!--<li class="btn-group"><a>欢迎您,admin</a>
+                        </li>-->
+					<div>
+						<li>
+							<a class="btn btn-primary" type="btn-large" href="#">登录</a>
+							<a class="btn btn-primary" type="btn-large" href="#">Username</a>
+							<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+							href="#"><span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#" id="dataes"><i class="icon-pencil"></i>
+										个人账户</a></li>
+								<li class="divider"></li>
+								<li><a href="#"><i class="i"></i>Exit</a></li>
+							</ul></li>
+					</div>
+					<!-- <li><a href="#">安全退出</a>
+                        </li> -->
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-2">
+				<a href="#" class="list-group-item" id="file">文件列表</a> <a href="#"
+					class="list-group-item" id="picture">图片列表</a> <a href="#"
+					class="list-group-item" id="upload">上传</a>
+			</div>
+
+			<!-- 中心区  文件列表 -->
+			<div id="centers">
+				<div class="col-md-10">
+					<ol class="breadcrumb">
+						<li class="active">
+							<h1>&nbsp;&nbsp;山&nbsp;&nbsp;东&nbsp;&nbsp;易&nbsp;&nbsp;口&nbsp;&nbsp;粮&nbsp;&nbsp;科&nbsp;&nbsp;技&nbsp;&nbsp;有&nbsp;&nbsp;限&nbsp;&nbsp;公&nbsp;&nbsp;司</h1>
+						</li>
+					</ol>
+
+					<div class="panel panel-default"></div>
+					列表展示
+					<div class="table-responsive">
+						<table class="table table-striped ">
+							<thead>
+								<tr>
+									<th>编号</th>
+									<th>类型</th>
+									<th>名称</th>
+									<th>收费</th>
+									<th>大小</th>
+									<th>备注</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>text</td>
+									<td>test</td>
+									<td>否</td>
+									<td>0.3M</td>
+									<td>测试文件</td>
+									<td>
+										<div class="btn-group">
+											<a href="" class="btn btn-default">下载</a>
+										</div>
+
+									</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>text</td>
+									<td>test</td>
+									<td>否</td>
+									<td>0.3M</td>
+									<td>测试文件</td>
+									<td>
+										<div class="btn-group">
+											<a href="" class="btn btn-default">下载</a>
+										</div>
+
+									</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>text</td>
+									<td>test</td>
+									<td>否</td>
+									<td>0.3M</td>
+									<td>测试文件</td>
+									<td>
+										<div class="btn-group">
+											<a href="" class="btn btn-default">下载</a>
+										</div>
+
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<nav style="text-align: center">
+						<ul class="pagination">
+							<li><a href="#">&laquo;</a></li>
+							<li class="active"><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a href="#">&raquo;</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!-- 中心区  图片列表 -->
+			<div id="pictures">
+				<div class="col-md-2">
+					<div class="thumbnail">
+						<img src="image/gg.jpg" />
+						<div class="caption">
+							<h3>冯诺尔曼结构</h3>
+							<p>
+								也称普林斯顿结构，是一种将程序指令存储器和数据存储器合并在一起的存储器结构。程序指令存储地址和数据存储地址指向同一个存储器的不同物理位置。
+							</p>
+							<p>
+								<a class="btn btn-primary">下载</a>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-2">
+					<div class="thumbnail">
+						<img src="image/user.jpg" />
+						<div class="caption">
+							<h3>冯诺尔曼结构</h3>
+							<p>
+								也称普林斯顿结构，是一种将程序指令存储器和数据存储器合并在一起的存储器结构。程序指令存储地址和数据存储地址指向同一个存储器的不同物理位置。
+							</p>
+							<p>
+								<a class="btn btn-primary">下载</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="thumbnail">
+						<img src="image/user.jpg" />
+						<div class="caption">
+							<h3>冯诺尔曼结构</h3>
+							<p>
+								也称普林斯顿结构，是一种将程序指令存储器和数据存储器合并在一起的存储器结构。程序指令存储地址和数据存储地址指向同一个存储器的不同物理位置。
+							</p>
+							<p>
+								<a class="btn btn-primary">下载</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="thumbnail">
+						<img src="image/user.jpg" />
+						<div class="caption">
+							<h3>冯诺尔曼结构</h3>
+							<p>
+								也称普林斯顿结构，是一种将程序指令存储器和数据存储器合并在一起的存储器结构。程序指令存储地址和数据存储地址指向同一个存储器的不同物理位置。
+							</p>
+							<p>
+								<a class="btn btn-primary">下载</a>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-2">
+					<div class="thumbnail">
+						<img src="image/user.jpg" />
+						<div class="caption">
+							<h3>冯诺尔曼结构</h3>
+							<p>
+								也称普林斯顿结构，是一种将程序指令存储器和数据存储器合并在一起的存储器结构。程序指令存储地址和数据存储地址指向同一个存储器的不同物理位置。
+							</p>
+							<p>
+								<a class="btn btn-primary">下载</a>
+							</p>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+			</div>
+
+
+
+			<!-- 中心区  上传 -->
+			<div id="uploads">
+				<div class="col-sm-10">
+					<form action="ChannelManageAction.a" method="post"
+							enctype="multipart/form-data" class="form-horizontal"
+							id="basic_validate" novalidate="novalidate">
+							<div class="control-group">
+								<label class="control-label">文件名称:</label>
+								<div class="controls">
+									<input style="width:180px" type="text" name="channelName">
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="s2">下载收费:</label>
+								<div class="controls">
+									<select style="width:200px;" name="channelType" id="s2">
+										<app:dictselect dictType="1105" />
+										<option value="1">默认免费</option>
+										<option value="2">5$</option>
+									</select>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="s2">上传文件类型:</label>
+								<div class="controls">
+									<select style="width:200px;" name="channelType" id="s2">
+										<app:dictselect dictType="1105" />
+										<option value="1">文本</option>
+										<option value="2">图片</option>
+									</select>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">文件说明:</label>
+								<div class="controls">
+									<input style="width:180px" type="text"> <span
+										id="showMsg" style="color: red"></span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">上传文件位置:</label>
+								<div class="controls">
+									<input type="file" name="fileContent" id="fileContent">
+								</div>
+							</div>
+
+							<div class="form-actions" style="padding-left: 180px;">
+								<button type="submit" name="doAddChannelInfo"
+									class="btn btn-success">
+									<i class="icon-ok icon-white"></i>上传
+								</button>
+								&nbsp;&nbsp;
+								<button type="button" class="btn btn-primary cancelBtn">
+									<i class="icon-remove icon-white"></i>取消
+								</button>
+							</div>
+						</form>
+				</div>
+			</div>
+
+			<!-- 中心区  个人账户 -->
+			<div id="datas">
+				<div class="col-sm-10">
+					<h3>用户充值:</h3>
+					<div class="table-responsive">
+						<table class="table table-striped ">
+							<thead>
+								<tr>
+									<th>
+										充值账号:<input type="text">
+									</th>
+									<th>
+										充值金额:<input type="text">
+									</th>
+									<th>
+										<input type="button" value="确认">
+									</th>
+									<th>
+										余额:<span>22</span>
+									</th>
+								</tr>
+							</thead>
+							
+						</table>
+				</div>
+			</div>
+			<div class="col-sm-10">
+					<h3>操作记录:</h3>
+					<div class="table-responsive">
+						<table class="table table-striped ">
+							<thead>
+								<tr>
+									<th>id</th>
+									<th>交易记录</th>
+									<th>交易时间</th>
+									<th>交易金额</th>
+									<th>交易状态</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>1</th>
+									<th>测试</th>
+									<th>2017-06-06</th>
+									<th>-5</th>
+									<th>正常</th>
+								</tr>
+								<tr>
+									<th>1</th>
+									<th>测试</th>
+									<th>2017-06-06</th>
+									<th>-5</th>
+									<th>正常</th>
+								</tr>
+							</tbody>
+							
+						</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>login.html</title>
+<meta http-equiv="Content-Type" content="textml;charset=utf-8">
+<link rel='stylesheet'
+	href='bower_components/bootstrap/dist/css/bootstrap.min.css'>
+<link rel='stylesheet'
+	href='bower_components/bootstrap/dist/css/mycss.css'>
+<script type="text/javascript"
+	src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript"
+	src="bower_components/bootstrap/dist/js/jquery.js"></script>
+<!-- <script type="text/javascript" src="bower_components/bootstrap/dist/js/login.js"></script> -->
+<script type="text/javascript" src="myscripts/login.js"></script>
+<script type="text/javascript" src="myscripts/cookie_util.js"></script>
+<script type="text/javascript" src="myscripts/basevalue.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#login").click(loginAction);
+		$("#true").click(registAction);
+		
+	});
+</script>
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4"></div>
+
+			<!-- 登录 -->
+			<div id="log_page" class="col-md-offset-3 col-md-4">
+				<form class="form-horizontal">
+					<span class="heading">用户登录</span>
+					<div class="form-group">
+						<input type="email" class="form-control " id="username"
+							placeholder="用户名账号"> <i class="fa fa-user"></i>
+					</div>
+					<div class="form-group help">
+						<input type="password" class="form-control" id="password"placeholder="密　码"> <i class="fa fa-lock"></i> 
+						<a class="fa fa-question-circle"></a>
+						<span id="name" style="color:red"></span>
+					</div>
+					
+					<p></p>
+					<div class="form-group">
+						<div class="main-checkbox">
+							<input type="checkbox" value="None" id="checkbox1" name="check" />
+							<label for="checkbox1"></label>
+						</div>
+						<span class="text">记住密码
+							<button id="regist" type="button" class="btn btn-default "
+								onclick="showreg()">注&nbsp;册</button>
+							<button id="login" type="button" class="btn btn-default"
+								onclick="">登&nbsp;录</button>
+						</span>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- 注册 -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7"></div>
+			<div id="reg_page" class="col-md-4" style="display:none">
+				<form class="form-horizontal">
+					<span class="heading">用户注册</span>
+					<div class="form-group">
+						<input type="text" class="form-control " id="user_name"
+							placeholder="注册用户名"> <i class="fa fa-user"></i>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control " id="name"
+							placeholder="真实姓名"> <i class="fa fa-user"></i>
+					</div>
+					<div class="form-group">
+						<input type="email" class="form-control " id="phone"
+							placeholder="手机号"> <i class="fa fa-user"></i>
+					</div>
+					<div class="form-group help">
+						<input type="password" class="form-control" id="reg_pwd"
+							placeholder="注册密码"> <i class="fa fa-lock"></i>
+					</div>
+					<div class="form-group help">
+						<input type="password" class="form-control" id="final_pwd"
+							placeholder="确认密码"> <i class="fa fa-lock"></i>
+							<span id="names" style="color:red"></span>
+					</div>
+					<div class="form-group">
+						<button id="back" class="btn btn-default " onclick="showlog()">返&nbsp;回</button>
+						<div class="col-md-4">
+							<div class="col-md-4"></div>
+							<button id="true" class="btn btn-default" onclick="">提&nbsp;交</button>
+						</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+</html>
+<!-- <script type="text/javascript">
+
+ 		function get(e){
+			return document.getElementById(e);
+		}
+		/**
+		 *	加入正则判断
+		 */
+		get('#user_name').onblur=function(){
+			var username = get('user_name').value;
+			alert(1111);
+			console.log(username);
+		}
+			/**
+			 *用户名以字母或者下划线开头,4-9位
+			 */
+			var regex = /^[a-zA-Z_][a-zA-Z0-9_]{3,8}$/;
+			
+			//不符合
+			if(!regex.test(user_name)){
+				//console.log(111);
+				alert(1111);
+				//get('warning_11').style.display='none';
+				get('warning_1').style.display='block';
+			} 
+			//符合
+			if(regex.test(username)){
+				//console.log(222);
+				get('warning_1').style.display='none';
+				get('warning_11').style.display='block';
+			}
+			
+		}
+		get('regist_password').onblur=function(){
+			var npassword=get('regist_password').value.length;
+			if(npassword<6&&npassword>0){
+				get('warning_2').style.display='block';
+			}
+		}
+		get('regist_password').onfocus=function(){
+			get('warning_2').style.display='none';
+		}
+		get('final_password').onfocus=function(){
+			get('warning_3').style.display='none';
+		}
+	
+	</script> -->
